@@ -1,0 +1,23 @@
+﻿syntax = "proto3";
+
+service PocGp{
+	rpc Hello(NameRequest) returns (NameResponse) {}
+
+	rpc AddingTen(IntRequest) returns(IntResponse) {}
+}
+
+message NameRequest{
+		string name = 1;
+	}
+
+	message NameResponse{
+		string name = 1;
+	}
+
+	message IntRequest{
+		int32 value = 1;
+	}
+
+	message IntResponse{
+		int32 value = 1;
+	}
